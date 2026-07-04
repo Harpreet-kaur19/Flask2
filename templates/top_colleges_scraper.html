@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Top Colleges Scraper | Harpreet Kaur</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/top_colleges_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Top Colleges Scraper</h1>
+
+    <p class="subtitle">
+        CollegeDunia Web Scraping using Python, Requests and BeautifulSoup
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>College</th>
+                <th>Ranking</th>
+                <th>Cutoff</th>
+                <th>Application Deadline</th>
+                <th>Fees</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for college in colleges %}
+
+        <tr>
+
+            <td>
+                {% if college.College %}
+                    {{ college.College.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+            <td>
+                {% if college.Ranking %}
+                    {{ college.Ranking.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+            <td>
+                {% if college.Cutoff %}
+                    {{ college.Cutoff.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+            <td>
+                {% if college.Application_Deadline %}
+                    {{ college.Application_Deadline.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+            <td>
+                {% if college.Fees %}
+                    {{ college.Fees.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <a href="/static_scraping" class="btn">
+        ⬅ Back to Static Scraping
+    </a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harpreet Kaur | Portfolio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        Harpreet<span>.</span>
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/portfolio">Portfolio</a></li>
+
+        <li><a href="/learnmore">Learn More</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h3>Hello, I'm</h3>
+
+        <h1>Harpreet Kaur</h1>
+
+        <h2>Aspiring AI & ML Engineer</h2>
+
+        <p>
+
+            Passionate about Artificial Intelligence, Machine Learning,
+            Data Analytics and Web Scraping.
+
+            I enjoy building practical Python projects using Flask,
+            BeautifulSoup, Selenium, APIs, Pandas and Scikit-Learn.
+
+        </p>
+
+        <div class="buttons">
+
+            <a href="/portfolio" class="btn">
+
+                View Portfolio
+
+            </a>
+
+            <a href="/learnmore" class="btn2">
+
+                Learn More
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="{{ url_for('static', filename='images/me1.jpeg') }}" alt="Harpreet">
+
+    </div>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section class="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skill-container">
+
+        <div class="card">
+
+            <i class="fa-brands fa-python"></i>
+
+            <h3>Python</h3>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>SQL</h3>
+
+        </div>
+
+        <!-- <div class="card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Data Analytics</h3>
+
+        </div> -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h3>Machine Learning</h3>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-globe"></i>
+
+            <h3>Web Scraping</h3>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Flask</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <h2>About Me</h2>
+
+    <p>
+
+        I am an enthusiastic learner with a strong interest in Artificial
+        Intelligence, Machine Learning, and Full Stack
+        Development.
+
+        My goal is to create intelligent applications that solve
+        real-world problems and continuously improve my programming
+        skills through hands-on projects.
+
+    </p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>Let's Connect</h3>
+
+    <div class="social">
+
+        <a href="https://www.linkedin.com/in/harpreet-kaur-70140a382/"><i class="fab fa-linkedin"></i></a>
+
+        <a href="https://github.com/Harpreet-kaur19"><i class="fab fa-github"></i></a>
+
+        <a href="mailto:8055kaur@gmail.com"><i class="fas fa-envelope"></i></a>
+
+    </div>
+
+    <p>
+
+        © 2026 Harpreet Kaur | All Rights Reserved
+
+    </p>
+
+</footer>
+
+</body>
+</html>

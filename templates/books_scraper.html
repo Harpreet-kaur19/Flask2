@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Books To Scrape | Harpreet Kaur</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/books_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 Books To Scrape</h1>
+
+    <p class="subtitle">
+        Dynamic Web Scraping using Selenium
+    </p>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>Book Title</th>
+            <th>Price</th>
+            <th>Availability</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for book in books %}
+
+        <tr>
+
+            <td>{{ book.title }}</td>
+
+            <td>{{ book.price }}</td>
+
+            <td>{{ book.availability }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <a href="/dynamic_scraping" class="btn">
+        ⬅ Back
+    </a>
+
+</div>
+
+</body>
+
+</html>

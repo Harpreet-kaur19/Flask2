@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mutual Funds Scraper | Harpreet Kaur</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/mutual_funds_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📈 Yahoo Finance Mutual Funds Scraper</h1>
+
+    <p class="subtitle">
+        Static Web Scraping using Python, Requests and BeautifulSoup
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Change</th>
+                <th>% Change</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for fund in funds %}
+
+            {% if fund|length >= 5 %}
+
+            <tr>
+
+                <td>{{ fund[0] }}</td>
+                <td>{{ fund[1] }}</td>
+                <td>{{ fund[2] }}</td>
+                <td>{{ fund[3] }}</td>
+                <td>{{ fund[4] }}</td>
+
+            </tr>
+
+            {% endif %}
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <a href="/static_scraping" class="btn">
+        ⬅ Back to Static Scraping
+    </a>
+
+</div>
+
+</body>
+
+</html>

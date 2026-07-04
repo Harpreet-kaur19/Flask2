@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Myntra Product Scraper</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/myntra_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Myntra Product Scraper</h1>
+
+<p class="subtitle">
+Products scraped using Selenium from Myntra.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Brand</th>
+<th>Product</th>
+<th>Price</th>
+<th>Original Price</th>
+<th>Discount</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for product in products %}
+
+<tr>
+
+<td>{{ product["Brand"] }}</td>
+
+<td>{{ product["Product"] }}</td>
+
+<td>{{ product["Price"] }}</td>
+
+<td>{{ product["Original Price"] }}</td>
+
+<td>{{ product["Discount"] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+<div class="buttons">
+
+<a href="/dynamic_scraping" class="btn">
+← Back
+</a>
+
+<a href="/learnmore" class="btn">
+Projects
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

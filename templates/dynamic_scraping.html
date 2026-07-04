@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Web Scraping | Harpreet Kaur</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learnmore.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        Harpreet<span>.</span>
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/learnmore">Projects</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Dynamic Web Scraping</h1>
+
+    <p>
+
+        Dynamic websites load content using JavaScript. To scrape such
+        websites, Selenium automates a web browser and extracts the
+        fully rendered page content.
+
+    </p>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section>
+
+<h2 class="heading">Project Overview</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-robot"></i>
+
+<h3>What is Dynamic Scraping?</h3>
+
+<p>
+
+Unlike static websites, dynamic websites generate content after the page
+loads. Selenium controls a browser to interact with buttons, forms,
+dropdowns and infinite scrolling before extracting data.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TECHNOLOGIES ================= -->
+
+<section>
+
+<h2 class="heading">Technologies Used</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fab fa-python"></i>
+
+<h3>Python</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-robot"></i>
+
+<h3>Selenium</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fab fa-chrome"></i>
+
+<h3>ChromeDriver</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-table"></i>
+
+<h3>Pandas</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-file-csv"></i>
+
+<h3>CSV</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section>
+
+<h2 class="heading">Sample Projects</h2>
+
+<div class="projects">
+
+<!-- SPOTIFY PLAYLIST SCRAPER -->
+<div class="card">
+
+    <i class="fab fa-spotify"></i>
+
+    <h3>Spotify Playlist Scraper</h3>
+
+    <p>
+
+        Scraped Spotify playlist data including song title,
+        artist name and duration using Selenium WebDriver
+        and Python.
+
+    </p>
+
+    <a href="{{ url_for('spotify_scraper') }}" class="btn">
+        View Project
+    </a>
+
+</div>
+<!--  -->
+<div class="card">
+
+    <i class="fas fa-book"></i>
+
+    <h3>Books To Scrape</h3>
+
+    <p>
+
+        Scraped book titles, prices and availability from Books To Scrape
+        using Selenium and Python.
+
+    </p>
+
+    <a href="{{ url_for('books_scraper') }}" class="btn">
+        View Project
+    </a>
+
+</div>
+<!--  -->
+<!-- IMDb Movie Scraper -->
+
+<div class="card">
+
+    <i class="fas fa-film"></i>
+
+    <h3>IMDb Top Movies Scraper</h3>
+
+    <p>
+
+        Extracted IMDb Top 250 movie titles, release year,
+        duration, certificate and ratings using Selenium.
+
+    </p>
+
+    <a href="{{ url_for('imdb_scraper') }}" class="btn">
+        View Project
+    </a>
+
+</div>
+
+<!-- MYNTRA SCRAPER -->
+
+<div class="card">
+
+    <i class="fas fa-tshirt"></i>
+
+    <h3>Myntra Product Scraper</h3>
+
+    <p>
+
+        Scraped Myntra product details including brand, product name,
+        discounted price, original price and discount percentage using
+        Selenium and CSS Selectors.
+
+    </p>
+
+    <a href="{{ url_for('myntra_scraper') }}" class="btn">
+
+        View Project
+
+    </a>
+
+</div>
+
+<div class="card">
+
+    <i class="fab fa-github"></i>
+
+    <h3>GitHub Trending Scraper</h3>
+
+    <p>
+
+        Scrapes trending GitHub repositories including repository name,
+        description, programming language, stars, forks and contributor
+        avatar using Selenium.
+
+    </p>
+
+    <a href="{{ url_for('github_scraper') }}" class="btn">
+
+        View Project
+
+    </a>
+
+</div>
+</section>
+
+<!-- ================= WORKFLOW ================= -->
+
+<section>
+
+<h2 class="heading">Workflow</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<h3>1️⃣ Launch Browser</h3>
+
+<p>
+
+Open Chrome using Selenium WebDriver.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2️⃣ Open Website</h3>
+
+<p>
+
+Navigate to the target website.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3️⃣ Wait for Loading</h3>
+
+<p>
+
+Wait until JavaScript finishes rendering the page.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4️⃣ Extract Data</h3>
+
+<p>
+
+Locate elements using XPath or CSS selectors.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>5️⃣ Save Results</h3>
+
+<p>
+
+Store extracted information into CSV files.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+<h2 class="heading">Features</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>Browser Automation</h3>
+
+<p>
+
+Automates clicks, typing and scrolling.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>JavaScript Support</h3>
+
+<p>
+
+Extracts content generated after page loading.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>CSV Export</h3>
+
+<p>
+
+Exports extracted information into CSV.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>Reusable Scripts</h3>
+
+<p>
+
+Easy to modify for similar websites.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SAMPLE CODE ================= -->
+
+<section>
+
+<h2 class="heading">Sample Selenium Code</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<pre style="color:white;text-align:left;white-space:pre-wrap;">
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+
+driver.get("https://example.com")
+
+title = driver.find_element(By.TAG_NAME,"h1").text
+
+print(title)
+
+driver.quit()
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SCREENSHOT ================= -->
+
+<section>
+
+<h2 class="heading">Project Output</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-image" style="font-size:80px;"></i>
+
+<h3>Add Selenium Output Screenshot</h3>
+
+<p>
+
+Replace this placeholder with your own project screenshot.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= LEARNING ================= -->
+
+<section>
+
+<h2 class="heading">Skills Gained</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>Selenium Automation</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>XPath & CSS Selectors</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>Browser Interaction</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>Dynamic Data Extraction</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NAVIGATION ================= -->
+
+<section class="contact">
+
+<h2>Explore More</h2>
+
+<p>
+
+Continue exploring my web scraping projects.
+
+</p>
+
+<a href="/static_scraping" class="btn">
+
+← Previous Project
+
+</a>
+
+<a href="/api_scraping" class="btn">
+
+Next Project →
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Harpreet Kaur | Dynamic Web Scraping Portfolio
+
+</p>
+
+</footer>
+
+</body>
+</html>

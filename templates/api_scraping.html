@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>API Web Scraping | Harpreet Kaur</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learnmore.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        Harpreet<span>.</span>
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/learnmore">Projects</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>API Web Scraping</h1>
+
+    <p>
+
+        API Web Scraping involves retrieving structured data directly
+        from REST APIs instead of extracting information from HTML pages.
+        It is faster, cleaner and more reliable than traditional scraping.
+
+    </p>
+
+</section>
+
+<!-- ================= PROJECT OVERVIEW ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Project Overview
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-cloud-download-alt"></i>
+
+<h3>REST API Data Collection</h3>
+
+<p>
+
+This project demonstrates how to collect structured JSON data
+from public APIs using Python Requests, process it with Pandas,
+and export the results into CSV files.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TECHNOLOGIES ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Technologies Used
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fab fa-python"></i>
+
+<h3>Python</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-network-wired"></i>
+
+<h3>REST APIs</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-download"></i>
+
+<h3>Requests</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-code"></i>
+
+<h3>JSON</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-table"></i>
+
+<h3>Pandas</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-file-csv"></i>
+
+<h3>CSV Export</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Projects Included
+
+</h2>
+
+<div class="projects">
+
+<!-- JSON API SCRAPER -->
+
+<div class="card">
+
+    <i class="fas fa-code"></i>
+
+    <h3>JSONPlaceholder API Scraper</h3>
+
+    <p>
+
+        Extracted post data including User ID, Post ID,
+        Title and Body from the JSONPlaceholder REST API
+        using Python Requests.
+
+    </p>
+
+    <a href="{{ url_for('json_scraper') }}" class="btn">
+
+        View Project
+
+    </a>
+
+</div>
+
+<!-- DummyJSON Product API -->
+
+<div class="card">
+
+    <i class="fas fa-box-open"></i>
+
+    <h3>DummyJSON Products API</h3>
+
+    <p>
+
+        Extracted product details including title,
+        brand, category, price, rating and stock
+        using the DummyJSON REST API and Python Requests.
+
+    </p>
+
+    <a href="{{ url_for('dummy_json_scraper') }}" class="btn">
+
+        View Project
+
+    </a>
+
+</div>
+
+<div class="card">
+
+    <i class="fas fa-store"></i>
+
+    <h3>FakeStore API Scraper</h3>
+
+    <p>
+
+        Retrieved product information including title,
+        category, price and ratings from the FakeStore
+        REST API using Python Requests.
+
+    </p>
+
+    <a href="{{ url_for('fakestore_api_scraper') }}" class="btn">
+
+        View Project
+
+    </a>
+
+</div>
+
+<!-- Courses API -->
+
+<div class="card">
+
+    <i class="fas fa-graduation-cap"></i>
+
+    <h3>Courses API Scraper</h3>
+
+    <p>
+
+        Retrieved online course information such as
+        title, category, trainer, duration and price
+        using Python Requests and a REST API.
+
+    </p>
+
+    <a href="{{ url_for('courses_api_scraper') }}" class="btn">
+
+        View Project
+
+    </a>
+
+</div>
+
+<!-- FEEDBACKS API -->
+
+<div class="card">
+
+    <i class="fas fa-comments"></i>
+
+    <h3>Feedbacks API Scraper</h3>
+
+    <p>
+
+        Retrieved user feedback records from the GyanSetu Feedbacks API,
+        including customer names, email addresses, ratings and feedback
+        messages using Python Requests.
+
+    </p>
+
+    <a href="{{ url_for('feedbacks_api_scraper') }}" class="btn">
+
+        View Project
+
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WORKFLOW ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Workflow
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<h3>1️⃣ Send Request</h3>
+
+<p>
+
+Use the Requests library to connect to an API endpoint.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2️⃣ Receive JSON</h3>
+
+<p>
+
+Retrieve structured JSON data from the server.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3️⃣ Process Data</h3>
+
+<p>
+
+Extract only the required fields using Python.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4️⃣ Export</h3>
+
+<p>
+
+Save processed data into CSV using Pandas.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Key Features
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>Fast Data Retrieval</h3>
+
+<p>
+
+Directly collects structured data without HTML parsing.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>JSON Parsing</h3>
+
+<p>
+
+Works efficiently with nested JSON responses.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>CSV Export</h3>
+
+<p>
+
+Stores API data into organized CSV files.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>Reusable Scripts</h3>
+
+<p>
+
+Can be adapted for different APIs with minimal changes.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SAMPLE CODE ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Sample Python Code
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<pre style="color:white;text-align:left;white-space:pre-wrap;">
+
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts"
+
+response = requests.get(url)
+
+posts = response.json()
+
+for post in posts[:5]:
+
+    print(post["id"])
+    print(post["title"])
+    print(post["body"])
+
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= OUTPUT ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Sample Output
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<pre style="color:white;text-align:left;white-space:pre-wrap;">
+
+Post ID : 1
+
+Title :
+
+sunt aut facere repellat provident occaecati...
+
+Body :
+
+quia et suscipit
+suscipit recusandae consequuntur expedita...
+
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SCREENSHOT ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Project Screenshot
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-image" style="font-size:80px;"></i>
+
+<h3>Add Screenshot Here</h3>
+
+<p>
+
+Insert screenshots of your API project output here.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= LEARNING ================= -->
+
+<section>
+
+<h2 class="heading">
+
+Skills Gained
+
+</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>REST API Integration</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>JSON Handling</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>Pandas DataFrames</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>CSV Export</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BUTTONS ================= -->
+
+<section class="contact">
+
+<h2>
+
+Explore More Projects
+
+</h2>
+
+<p>
+
+Continue exploring my portfolio and other Python projects.
+
+</p>
+
+<a href="/dynamic_scraping" class="btn">
+
+← Previous Project
+
+</a>
+
+<a href="/portfolio" class="btn">
+
+Portfolio
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Harpreet Kaur | API Web Scraping Portfolio
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart Shoes Scraper | Harpreet Kaur</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/flipkart_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👟 Flipkart Shoes Web Scraper</h1>
+
+    <p class="subtitle">
+        Dynamic Web Scraping using Python, Requests and BeautifulSoup
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Title</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Size</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for shoe in shoes %}
+
+        <tr>
+
+            <td>
+                {% if shoe.title %}
+                    {{ shoe.title.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+            <td>
+                {% if shoe.price %}
+                    {{ shoe.price.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+            <td>
+                {% if shoe.discount %}
+                    {{ shoe.discount.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+            <td>
+                {% if shoe.size %}
+                    {{ shoe.size.get_text(strip=True) }}
+                {% else %}
+                    N/A
+                {% endif %}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <a href="/" class="btn">⬅ Back to Portfolio</a>
+
+</div>
+
+</body>
+
+</html>

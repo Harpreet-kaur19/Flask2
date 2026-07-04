@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedbacks API Scraper</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/feedbacks_api_scraper.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Feedbacks API Scraper</h1>
+
+    <p class="subtitle">
+        Feedback data fetched from the GyanSetu API.
+    </p>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Feedback</th>
+            <th>Rating</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for item in data %}
+
+        <tr>
+
+            <td>{{ item.get("id","N/A") }}</td>
+
+            <td>{{ item.get("name","N/A") }}</td>
+
+            <td>{{ item.get("email","N/A") }}</td>
+
+            <td>{{ item.get("feedback","N/A") }}</td>
+
+            <td>{{ item.get("rating","N/A") }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <a href="{{ url_for('api') }}" class="btn">
+        ← Back to API Projects
+    </a>
+
+</div>
+
+</body>
+</html>

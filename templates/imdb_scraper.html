@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMDb Top Movies | Harpreet Kaur</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/imdb_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎬 IMDb Top Movies Scraper</h1>
+
+    <p class="subtitle">
+        Dynamic Web Scraping using Selenium
+    </p>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>Title</th>
+            <th>Year</th>
+            <th>Duration</th>
+            <th>Certificate</th>
+            <th>Rating</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for movie in movies %}
+
+        <tr>
+
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.year }}</td>
+            <td>{{ movie.duration }}</td>
+            <td>{{ movie.certificate }}</td>
+            <td>{{ movie.rating }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <a href="/dynamic_scraping" class="btn">
+        ⬅ Back
+    </a>
+
+</div>
+
+</body>
+
+</html>

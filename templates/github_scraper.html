@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>GitHub Trending Scraper</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/github_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>GitHub Trending Repositories</h1>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Avatar</th>
+<th>Repository</th>
+<th>Description</th>
+<th>Language</th>
+<th>Stars</th>
+<th>Forks</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for repo in repositories %}
+
+<tr>
+
+<td>
+
+<img src="{{ repo.Image }}" width="60">
+
+</td>
+
+<td>{{ repo.Repository }}</td>
+
+<td>{{ repo.Description }}</td>
+
+<td>{{ repo.Language }}</td>
+
+<td>{{ repo.Stars }}</td>
+
+<td>{{ repo.Forks }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+<div class="buttons">
+
+<a href="/dynamic_scraping" class="btn">← Back</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify Playlist Scraper | Harpreet Kaur</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/spotify_scraper.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎵 Spotify Playlist Scraper</h1>
+
+    <p class="subtitle">
+        Dynamic Web Scraping using Selenium
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Duration</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for song in songs %}
+
+        <tr>
+
+            <td>{{ song.title }}</td>
+
+            <td>{{ song.artist }}</td>
+
+            <td>{{ song.duration }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <a href="/dynamic_scraping" class="btn">
+        ⬅ Back to Dynamic Scraping
+    </a>
+
+</div>
+
+</body>
+
+</html>

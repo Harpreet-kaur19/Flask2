@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Courses API Scraper</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/courses_api_scraper.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Courses API</h1>
+
+    <p class="subtitle">
+        Online courses collected using Python Requests from REST API
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Title</th>
+                <th>Category</th>
+                <th>Trainer</th>
+                <th>Duration</th>
+                <th>Price</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for course in data.data %}
+
+            <tr>
+
+                <td>{{ course.title }}</td>
+
+                <td>{{ course.category }}</td>
+
+                <td>{{ course.trainer }}</td>
+
+                <td>{{ course.duration }}</td>
+
+                <td>{{ course.price }}</td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <div class="buttons">
+
+        <a href="/api_scraping" class="btn">
+
+            ← Back to API Projects
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

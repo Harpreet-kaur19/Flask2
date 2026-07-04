@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Scraper Project</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/amazon_scraper.css') }}">
+    <style>
+        .container{
+            width:90%;
+            margin:50px auto;
+            text-align:center;
+        }
+
+        h1{
+            color:#38bdf8;
+            margin-bottom:20px;
+        }
+
+        p{
+            color:#d1d5db;
+            margin-bottom:30px;
+        }
+
+        .pdf-box{
+            width:100%;
+            height:80vh;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        iframe{
+            width:100%;
+            height:100%;
+            border:none;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 25px;
+            background:#38bdf8;
+            color:black;
+            text-decoration:none;
+            border-radius:25px;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#0ea5e9;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Harpreet<span>.</span></div>
+</nav>
+
+<div class="container">
+
+    <h1>🛒 Amazon Product Scraper Project</h1>
+
+    <p>
+        This project demonstrates web scraping using Python (BeautifulSoup + Requests).
+        Below is the full project report.
+    </p>
+
+    <h2 style="margin-top:40px;">Live Scraped Amazon Products</h2>
+
+<table class="product-table">
+
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price (₹)</th>
+            <th>MRP</th>
+            <th>Rating</th>
+            <th>Reviews</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    {% for product in products %}
+
+        <tr>
+            <td>{{ product.title }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.mrp }}</td>
+            <td>{{ product.rating }}</td>
+            <td>{{ product.reviews }}</td>
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+</table>
+
+<hr style="margin:50px 0;">
+
+<h2>Live Scraped Amazon Products</h2>
+
+<table border="1" cellpadding="10" cellspacing="0" style="margin:auto;color:white;">
+
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>MRP</th>
+        <th>Rating</th>
+        <th>Reviews</th>
+    </tr>
+
+    {% for product in products %}
+
+    <tr>
+        <td>{{ product.title }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.mrp }}</td>
+        <td>{{ product.rating }}</td>
+        <td>{{ product.reviews }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

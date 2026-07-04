@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Harpreet Kaur</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        Harpreet<span>.</span>
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/learnmore">Projects</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= PAGE TITLE ================= -->
+
+<section class="page-title">
+
+    <h1>My Portfolio</h1>
+
+    <p>
+        Passionate about AI, Machine Learning, Data Analytics,
+        Python Development and Web Scraping.
+    </p>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="portfolio-section">
+
+    <h2>About Me</h2>
+
+    <div class="portfolio-card">
+
+        <img src="{{ url_for('static', filename='images/me1.jpeg') }}" alt="Harpreet">
+
+        <div>
+
+            <h3>Harpreet Kaur</h3>
+
+            <p>
+
+                I am an aspiring AI & Machine Learning Engineer with a strong
+                interest in solving real-world problems using Python.
+
+                My expertise includes Data Analytics, Machine Learning,
+                Flask Web Development, SQL and Web Scraping.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="portfolio-section">
+
+<h2>Education</h2>
+
+<div class="timeline">
+
+<div class="timeline-box">
+
+<h3>Bachelor of Technology</h3>
+
+<p>Computer Science Engineering</p>
+
+<p>Specialization in Artificial Intelligence & Machine Learning</p>
+
+</div>
+
+<div class="timeline-box">
+
+<h3>Python & AI Bootcamp</h3>
+
+<p>Hands-on Training</p>
+
+<p>Python, Pandas, Flask, Machine Learning, Web Scraping</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section class="portfolio-section">
+
+<h2>Technical Skills</h2>
+
+<div class="skill-container">
+
+<div class="card">
+<i class="fab fa-python"></i>
+<h3>Python</h3>
+</div>
+
+<div class="card">
+<i class="fas fa-code"></i>
+<h3>Flask</h3>
+</div>
+
+<div class="card">
+<i class="fas fa-database"></i>
+<h3>SQL</h3>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-bar"></i>
+<h3>Pandas</h3>
+</div>
+
+<div class="card">
+<i class="fas fa-brain"></i>
+<h3>Machine Learning</h3>
+</div>
+
+<div class="card">
+<i class="fas fa-globe"></i>
+<h3>Web Scraping</h3>
+</div>
+
+<div class="card">
+<i class="fab fa-html5"></i>
+<h3>HTML</h3>
+</div>
+
+<div class="card">
+<i class="fab fa-css3-alt"></i>
+<h3>CSS</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="portfolio-section">
+
+<h2>Featured Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<h3>Static Web Data Scraping</h3>
+
+<p>
+
+Tracks product prices using BeautifulSoup and stores data in CSV
+for future analysis.
+
+</p>
+
+<a href="/static_scraping" class="project-btn">View Project</a></div>
+
+<div class="project-card">
+
+<h3>Dynamic Website Scraper</h3>
+
+<p>
+
+Automates JavaScript websites using Selenium WebDriver and extracts
+real-time information.
+
+</p>
+
+<a href="/dynamic_scraping" class="project-btn">View Project</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>API Data Scraping</h3>
+
+<p>
+
+Collects structured data from REST APIs using Python requests
+library and exports results.
+
+</p>
+
+<a href="/api_scraping" class="project-btn">View Project</a>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section class="portfolio-section">
+
+<h2>Certifications</h2>
+
+<div class="certificate-box">
+
+<ul>
+
+<li>Python Programming</li>
+
+<li>Artificial Intelligence Fundamentals</li>
+
+<li>Machine Learning</li>
+
+<li>Data Analytics using Python</li>
+
+<li>Web Scraping with BeautifulSoup & Selenium</li>
+
+<li>Flask Web Development</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= RESUME ================= -->
+
+<section class="portfolio-section">
+
+<h2>Resume</h2>
+
+<p>
+
+Click below to download my latest resume.
+
+</p>
+
+<a href="#" class="resume-btn">
+
+<i class="fas fa-download"></i>
+
+Download Resume
+
+</a>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<!-- ================= CONTACT ================= -->
+
+<section class="portfolio-section">
+
+    <h2>Contact Me</h2>
+
+    <div class="contact-grid">
+
+        <!-- Email -->
+
+        <div class="contact-card">
+
+            <i class="fas fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>
+                <a href="mailto:8055kaur@gmail.com">
+                    8055kaur@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+        <!-- LinkedIn -->
+
+        <div class="contact-card">
+
+            <i class="fab fa-linkedin"></i>
+
+            <h3>LinkedIn</h3>
+
+            <p>
+                <a href="https://www.linkedin.com/in/harpreet-kaur-70140a382/"
+                   target="_blank">
+                    linkedin.com/in/harpreet-kaur-70140a382
+                </a>
+            </p>
+
+        </div>
+
+        <!-- GitHub -->
+
+        <div class="contact-card">
+
+            <i class="fab fa-github"></i>
+
+            <h3>GitHub</h3>
+
+            <p>
+                <a href="https://github.com/Harpreet-kaur19"
+                   target="_blank">
+                    github.com/Harpreet-kaur19
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Harpreet Kaur • Built with Flask, HTML & CSS
+
+</p>
+
+</footer>
+
+</body>
+</html>
+
+
+

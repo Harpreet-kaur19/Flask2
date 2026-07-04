@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Static Web Scraping | Harpreet Kaur</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learnmore.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        Harpreet<span>.</span>
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/learnmore">Projects</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Static Web Scraping</h1>
+
+    <p>
+
+        Static web scraping is the process of extracting information from websites
+        whose content is directly available in the HTML source. I used Python,
+        Requests and BeautifulSoup to build these projects.
+
+    </p>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section>
+
+<h2 class="heading">Project Overview</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-globe"></i>
+
+<h3>About Static Scraping</h3>
+
+<p>
+
+Static websites return complete HTML when requested.
+
+BeautifulSoup parses the HTML while Requests downloads
+the webpage.
+
+The extracted data is then cleaned using Pandas and stored
+in CSV files.
+
+</p>
+
+<!--  -->
+<a href="{{ url_for('static', filename='css/amazon_scraper.css') }}" class= "btn"></a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TECHNOLOGIES ================= -->
+
+<section>
+
+<h2 class="heading">Technologies Used</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fab fa-python"></i>
+
+<h3>Python</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-download"></i>
+
+<h3>Requests</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-code"></i>
+
+<h3>BeautifulSoup</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-table"></i>
+
+<h3>Pandas</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-file-csv"></i>
+
+<h3>CSV</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section>
+
+<h2 class="heading">Projects</h2>
+
+<div class="projects">
+
+<!-- AMAZON -->
+<div class="card">
+
+    <i class="fab fa-amazon"></i>
+
+    <h3>Amazon Product Scraper</h3>
+
+    <p>
+        Extracted product title, price, rating and availability from Amazon.
+        Stored the results into CSV using Pandas.
+    </p>
+
+    <a href="{{ url_for('amazon_scraper') }}" class="btn">
+        View Project
+    </a>
+
+</div>
+
+<!-- FLIPKART -->
+<div class="card">
+
+    <i class="fas fa-shopping-cart"></i>
+
+    <h3>Flipkart Product Scraper</h3>
+
+    <p>
+
+        Collected product name, price, discount and available sizes from
+        Flipkart using Python, Requests and BeautifulSoup.
+
+    </p>
+
+    <a href="{{ url_for('flipkart_scraper') }}" class="btn">
+        View Project
+    </a>
+
+</div>
+
+<!-- GOODREADS -->
+<div class="card">
+
+    <i class="fas fa-book"></i>
+
+    <h3>Goodreads Quotes Scraper</h3>
+
+    <p>
+
+        Scraped inspirational quotes, authors, likes and tags
+        from Goodreads using Requests and BeautifulSoup.
+
+    </p>
+
+    <a href="{{ url_for('goodreads_scraper') }}" class="btn">
+    View Project
+</a>
+
+</div>
+
+<!-- MUTUAL FUNDS -->
+<div class="card">
+
+    <i class="fas fa-chart-line"></i>
+
+    <h3>Mutual Funds Scraper</h3>
+
+    <p>
+
+        Scraped mutual fund names, NAV, returns and fund details
+        using Python, Requests and BeautifulSoup for investment analysis.
+
+    </p>
+
+    <a href="{{ url_for('mutual_funds_scraper') }}" class="btn">
+        View Project
+    </a>
+
+</div>
+
+<!-- COLLEGEDUNIA -->
+<div class="card">
+
+    <i class="fas fa-university"></i>
+
+    <h3>Top Colleges Scraper</h3>
+
+    <p>
+
+        Scraped top colleges from CollegeDunia including college name,
+        ranking, cutoff, application deadline and annual fees using
+        Python, Requests and BeautifulSoup.
+
+    </p>
+
+    <a href="{{ url_for('top_colleges_scrapers') }}" class="btn">
+        View Project
+    </a>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+<!-- ================= WORKFLOW ================= -->
+
+<section>
+
+<h2 class="heading">Project Workflow</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<h3>1️⃣ Send Request</h3>
+
+<p>
+
+Use Requests library to download webpage HTML.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2️⃣ Parse HTML</h3>
+
+<p>
+
+BeautifulSoup parses HTML into an easy-to-search structure.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3️⃣ Extract Data</h3>
+
+<p>
+
+Find required elements using tags, classes and CSS selectors.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4️⃣ Export CSV</h3>
+
+<p>
+
+Store extracted information into CSV files using Pandas.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+<h2 class="heading">Features</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>Fast Extraction</h3>
+
+<p>
+
+Collects structured information quickly.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>Reusable Code</h3>
+
+<p>
+
+Python scripts can be reused for similar websites.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>CSV Export</h3>
+
+<p>
+
+Stores scraped data in CSV format for future analysis.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-check-circle"></i>
+
+<h3>Data Cleaning</h3>
+
+<p>
+
+Pandas helps prepare clean datasets for visualization.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SAMPLE CODE ================= -->
+
+<section>
+
+<h2 class="heading">Sample Code</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<pre style="text-align:left;color:white;white-space:pre-wrap;">
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+
+response = requests.get(url)
+
+soup = BeautifulSoup(response.text,"html.parser")
+
+title = soup.find("h1").text
+
+print(title)
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SCREENSHOT ================= -->
+
+<section>
+
+<h2 class="heading">Project Screenshot</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-image" style="font-size:80px;"></i>
+
+<h3>Add Your Screenshot Here</h3>
+
+<p>
+
+Replace this placeholder with screenshots of your scraping output.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SKILLS GAINED ================= -->
+
+<section>
+
+<h2 class="heading">Skills Gained</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>HTML Parsing</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>Data Collection</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>CSV Handling</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>Python Automation</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BUTTONS ================= -->
+
+<section class="contact">
+
+<h2>Explore More Projects</h2>
+
+<p>
+
+Browse my complete collection of Web Scraping projects.
+
+</p>
+
+<a href="/webscrapping" class="btn">
+
+<i class="fas fa-arrow-left"></i>
+
+Back to Web Scraping
+
+</a>
+
+<a href="/dynamic_scraping" class="btn">
+
+Next Project →
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Harpreet Kaur | Static Web Scraping Portfolio
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
