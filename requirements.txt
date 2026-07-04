@@ -1,2 +1,9 @@
 Flask
 gunicorn
+beautifulsoup4
+requests
+lxml
+pandas
+openpyxl
+selenium
+webdriver-manager
