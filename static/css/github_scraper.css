@@ -1,0 +1,260 @@
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+
+}
+
+.container{
+
+    width:95%;
+    max-width:1300px;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+h1{
+
+    text-align:center;
+    margin-bottom:10px;
+    color:#0f172a;
+
+}
+
+.subtitle{
+
+    text-align:center;
+    margin-bottom:30px;
+    color:gray;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#2563eb;
+    color:white;
+
+}
+
+th,td{
+
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    text-align:left;
+
+}
+
+tbody tr:hover{
+
+    background:#f5f5f5;
+
+}
+
+.btn{
+
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+
+}
+
+.btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+@media(max-width:768px){
+
+table{
+
+display:block;
+overflow-x:auto;
+
+}
+
+} */
+
+/* ==========================
+   GOOGLE FONT
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    min-height:100vh;
+    padding:40px;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+
+h1{
+    text-align:center;
+    color:#ffffff;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#dbeafe;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+/* ==========================
+   TABLE HEADER
+========================== */
+
+thead{
+    background:#2563eb;
+}
+
+th{
+    color:white;
+    padding:18px;
+    font-size:18px;
+    font-weight:600;
+    text-align:left;
+}
+
+/* ==========================
+   TABLE BODY
+========================== */
+
+td{
+    padding:16px;
+    color:white;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    vertical-align:top;
+    font-size:15px;
+}
+
+tbody tr:nth-child(even){
+    background:rgba(255,255,255,.05);
+}
+
+tbody tr:hover{
+    background:rgba(37,99,235,.35);
+    transition:.3s;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.buttons{
+    text-align:center;
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    margin:8px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+    body{
+        padding:20px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    th,
+    td{
+        padding:14px;
+        font-size:14px;
+    }
+}
+/* Add this at the very end */
+
+img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}

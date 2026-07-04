@@ -1,0 +1,188 @@
+/* ===========================
+   AMAZON SCRAPER PAGE
+   =========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+    color:white;
+    min-height:100vh;
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,0.95);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#ffffff;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+/* ===========================
+   MAIN CONTAINER
+   =========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    text-align:center;
+}
+
+.container h1{
+    font-size:42px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.container p{
+    max-width:800px;
+    margin:auto;
+    color:#d1d5db;
+    line-height:1.8;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+
+
+/* ===========================
+   BUTTONS
+   =========================== */
+
+.btn{
+    display:inline-block;
+    margin:30px 10px 10px;
+    padding:14px 32px;
+    background:#38bdf8;
+    color:#0f172a;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(56,189,248,.35);
+}
+
+.btn:hover{
+    background:#0ea5e9;
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(56,189,248,.45);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media(max-width:992px){
+
+    .container h1{
+        font-size:34px;
+    }
+
+    .container p{
+        font-size:16px;
+    }
+
+    .pdf-box{
+        height:70vh;
+    }
+
+}
+
+@media(max-width:768px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+    .container{
+        width:95%;
+        margin:30px auto;
+    }
+
+    .container h1{
+        font-size:28px;
+    }
+
+    .pdf-box{
+        height:60vh;
+    }
+
+    .btn{
+        display:block;
+        width:260px;
+        margin:20px auto;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .container h1{
+        font-size:24px;
+    }
+
+    .container p{
+        font-size:15px;
+    }
+
+    .pdf-box{
+        height:50vh;
+    }
+
+}
+.product-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+    background:#111827;
+    color:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.product-table th{
+    background:#38bdf8;
+    color:#111827;
+    padding:15px;
+}
+
+.product-table td{
+    padding:12px;
+    border-bottom:1px solid #374151;
+    text-align:left;
+}
+
+.product-table tr:hover{
+    background:#1f2937;
+}
