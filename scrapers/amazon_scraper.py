@@ -26,14 +26,17 @@ def scrap_amazon_data():
         discount = product.find("span", class_="a-letter-space")
         rating = product.find("span", class_="a-icon-alt")
         reviews = product.find("span", class_="a-size-base")
+        image = product.find("img", class_="s-image")
     
         Amazon_data.append({
-            "title": title.text if title else None,
-            "price": price.text if price else None,
-            "mrp": mrp.text if mrp else None,
-            "discount": discount.text if discount else None,
-            "rating": rating.text if rating else None,
-            "reviews": reviews.text if reviews else None
+        "image": image["src"] if image else None,
+        "title": title.text.strip() if title else "N/A",
+        "price": price.text.strip() if price else "N/A",
+        "mrp": mrp.text.strip() if mrp else "N/A",
+        "discount": discount.text.strip() if discount else "N/A",
+        "rating": rating.text.strip() if rating else "N/A",
+        "reviews": reviews.text.strip() if reviews else "N/A"
         })
 
     return Amazon_data
+
