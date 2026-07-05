@@ -23,66 +23,33 @@
         Dynamic Web Scraping using Python, Requests and BeautifulSoup
     </p>
 
-    <table>
 
-        <thead>
 
-            <tr>
+    <h2 class="section-title">Latest Flipkart Shoes</h2>
 
-                <th>Title</th>
-                <th>Price</th>
-                <th>Discount</th>
-                <th>Size</th>
+<div class="products-grid">
 
-            </tr>
+{% for shoe in shoes %}
 
-        </thead>
+<div class="product-card">
 
-        <tbody>
+    <img src="{{ shoe.image }}" alt="Shoe Image">
 
-        {% for shoe in shoes %}
+    <h3>{{ shoe.title }}</h3>
 
-        <tr>
+    <p><strong>Price:</strong> {{ shoe.price }}</p>
 
-            <td>
-                {% if shoe.title %}
-                    {{ shoe.title.get_text(strip=True) }}
-                {% else %}
-                    N/A
-                {% endif %}
-            </td>
+    <p><strong>Discount:</strong> {{ shoe.discount }}</p>
 
-            <td>
-                {% if shoe.price %}
-                    {{ shoe.price.get_text(strip=True) }}
-                {% else %}
-                    N/A
-                {% endif %}
-            </td>
+    <p><strong>Size:</strong> {{ shoe.size }}</p>
 
-            <td>
-                {% if shoe.discount %}
-                    {{ shoe.discount.get_text(strip=True) }}
-                {% else %}
-                    N/A
-                {% endif %}
-            </td>
+</div>
 
-            <td>
-                {% if shoe.size %}
-                    {{ shoe.size.get_text(strip=True) }}
-                {% else %}
-                    N/A
-                {% endif %}
-            </td>
+{% endfor %}
 
-        </tr>
+</div>
 
-        {% endfor %}
 
-        </tbody>
-
-    </table>
 
     <a href="/" class="btn">⬅ Back to Portfolio</a>
 
