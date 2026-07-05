@@ -23,40 +23,39 @@
         Web Scraping using Python, Requests and BeautifulSoup
     </p>
 
-    <table>
+  <div class="quotes-grid">
 
-        <thead>
+    {% for quote in quotes %}
 
-            <tr>
-                <th>Quote</th>
-                <th>Author</th>
-                <th>Likes</th>
-                <th>Tags</th>
-            </tr>
+    <div class="quote-card">
 
-        </thead>
+        <div class="author-avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
 
-        <tbody>
+        <p class="quote-text">
+            "{{ quote.text }}"
+        </p>
 
-        {% for quote in quotes %}
+        <h3>{{ quote.author }}</h3>
 
-        <tr>
+        <p class="likes">
+            ❤️ {{ quote.likes }}
+        </p>
 
-            <td>{{ quote.text }}</td>
+        <p class="tags">
+            {{ quote.tags }}
+        </p>
 
-            <td>{{ quote.author }}</td>
+    </div>
 
-            <td>{{ quote.likes }}</td>
+    {% endfor %}
 
-            <td>{{ quote.tags }}</td>
+</div>
 
-        </tr>
-
-        {% endfor %}
-
-        </tbody>
-
-    </table>
+<div class="buttons">
+    <a href="/static_scraping" class="btn">⬅ Back</a>
+</div>
 
     <a href="/static_scraping" class="btn">
         ⬅ Back
