@@ -250,3 +250,54 @@ tbody tr:hover{
         font-size:14px;
     }
 }
+
+
+
+.quotes-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.quote-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.quote-card:hover{
+    transform:translateY(-8px);
+}
+
+.author-avatar i{
+    font-size:70px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.quote-text{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:18px;
+    color:#fff;
+}
+
+.quote-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.likes{
+    color:#f87171;
+    margin-bottom:10px;
+}
+
+.tags{
+    color:#d1d5db;
+    font-size:14px;
+}
