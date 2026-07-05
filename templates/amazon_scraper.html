@@ -69,65 +69,39 @@
         Below is the full project report.
     </p>
 
-    <h2 style="margin-top:40px;">Live Scraped Amazon Products</h2>
+    <h2 class="section-title">Live Amazon Products</h2>
 
-<table class="product-table">
+<div class="products-grid">
 
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Price (₹)</th>
-            <th>MRP</th>
-            <th>Rating</th>
-            <th>Reviews</th>
-        </tr>
-    </thead>
+{% for product in products %}
 
-    <tbody>
+<div class="product-card">
 
-    {% for product in products %}
+    <img src="{{ product.image }}" alt="Product Image">
 
-        <tr>
-            <td>{{ product.title }}</td>
-            <td>{{ product.price }}</td>
-            <td>{{ product.mrp }}</td>
-            <td>{{ product.rating }}</td>
-            <td>{{ product.reviews }}</td>
-        </tr>
+    <h3>{{ product.title }}</h3>
 
-    {% endfor %}
+    <p><strong>Price:</strong> ₹{{ product.price }}</p>
+
+    <p><strong>MRP:</strong> {{ product.mrp }}</p>
+
+    <p><strong>Rating:</strong> {{ product.rating }}</p>
+
+    <p><strong>Reviews:</strong> {{ product.reviews }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
 
     </tbody>
 
 </table>
 
-<hr style="margin:50px 0;">
 
-<h2>Live Scraped Amazon Products</h2>
 
-<table border="1" cellpadding="10" cellspacing="0" style="margin:auto;color:white;">
 
-    <tr>
-        <th>Title</th>
-        <th>Price</th>
-        <th>MRP</th>
-        <th>Rating</th>
-        <th>Reviews</th>
-    </tr>
-
-    {% for product in products %}
-
-    <tr>
-        <td>{{ product.title }}</td>
-        <td>{{ product.price }}</td>
-        <td>{{ product.mrp }}</td>
-        <td>{{ product.rating }}</td>
-        <td>{{ product.reviews }}</td>
-    </tr>
-
-    {% endfor %}
-
-</table>
 
 </div>
 
