@@ -17,8 +17,13 @@ def scrape_quote_data():
         text = i.find("div", class_="quoteText").get_text(strip=True)
         author = i.find("span", class_="authorOrTitle").get_text(strip=True)
         likes = i.find("a", class_="smallText").get_text(strip=True)
-        tags = i.find("div", class_="greyText smallText left").get_text(strip=True) if i.find("div", class_= "greyText") else None
-    
+        tag_div = i.find("div", class_="greyText smallText left")
+
+        if tag_div:
+            tag_list = [tag.get_text(strip=True) for tag in tag_div.find_all("a")]
+            tags = ", ".join(tag_list)
+        else:
+            tags = "No Tags"        
         Quote_data.append({
         "text":text,
         "author": author,
